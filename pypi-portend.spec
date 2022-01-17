@@ -4,7 +4,7 @@
 #
 Name     : pypi-portend
 Version  : 3.1.0
-Release  : 40
+Release  : 41
 URL      : https://files.pythonhosted.org/packages/6e/0a/42bcc9c97744958ce72d33f526e972379b9e90adede8a151f338818c41d4/portend-3.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6e/0a/42bcc9c97744958ce72d33f526e972379b9e90adede8a151f338818c41d4/portend-3.1.0.tar.gz
 Summary  : TCP port monitoring and discovery
@@ -14,18 +14,14 @@ Requires: pypi-portend-license = %{version}-%{release}
 Requires: pypi-portend-python = %{version}-%{release}
 Requires: pypi-portend-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: portend
-Provides: portend-python
-Provides: portend-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
+BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_scm)
 BuildRequires : pypi(tempora)
-BuildRequires : pytest
-BuildRequires : setuptools_scm
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 .. image:: https://img.shields.io/pypi/v/portend.svg
@@ -70,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641470517
+export SOURCE_DATE_EPOCH=1642463343
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
